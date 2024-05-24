@@ -1,0 +1,98 @@
+.action {
+    color: white;
+    background-color: rgb(88, 88, 88);
+    -webkit-box-orient: vertical;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #fff;
+    width: 200px;
+    border-radius: 2%;
+    line-height: 1.2;
+    font-size: 18px
+}
+
+.size {
+    font-size: 14px;
+    min-width: 40px;
+    text-align: center;
+    line-height: 35px;
+    min-height: 40px;
+    cursor: pointer;
+    border: 1px solid rgb(207, 207, 207);
+    color: black;
+    margin: 5px 5px 5px;
+}
+
+.variant {
+    display: none !important;
+}
+
+.li {
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+
+.minus {
+    border: 1px solid rgb(230, 230, 230);
+    background-color: #fff;
+    border-radius: 20%;
+    width: 40px;
+    height: 39px;
+}
+
+.number {
+    border: 1px solid rgb(230, 230, 230);
+    text-align: center;
+    margin: 0px 3px 0px 3px;
+    border-radius: 10%;
+    width: 60px;
+    height: 39px;
+
+}
+
+.plus {
+    border: 1px solid rgb(230, 230, 230);
+    background-color: #fff;
+    border-radius: 20%;
+    width: 40px;
+    height: 39px;
+}
+
+.btn {
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    /* background-color: red; */
+    margin: 20px 20px 3px 0px;
+    /* border: 1px solid rgb(255, 4, 4); */
+    width: 250px;
+
+}
+
+.Buy {
+    text-transform: uppercase;
+}
+
+.note {
+    font-size: 14px;
+}
+
+.btn-1 {
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    /* background-color: #288ad6; */
+    margin: 20px 20px 3px 0px;
+    /* border: 1px solid #288ad6; */
+    width: 200px;
+}
+
+.cart {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.height {
+    margin-top: 205px;
+}

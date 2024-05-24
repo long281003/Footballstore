@@ -1,0 +1,40 @@
+.Quantity {
+    margin-left: 500px;
+}
+
+.Price {
+    margin-left: 250px;
+}
+
+.Total {
+    margin-left: 170px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+
+.product-name {
+    color: gray;
+    padding: 0 16px;
+    text-align: center
+}
+
+.product-price {
+    color: gray;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.product-action {
+    padding: 16px;
+}
+
+.icon-user {}
+
+.log-in {}
+
+.register {}
