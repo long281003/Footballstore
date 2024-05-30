@@ -19,22 +19,22 @@ const Ball = (props: Props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetchdata();
-        // fetchApi()
+        // fetchdata();
+        fetchApi()
     }, [])
 
-    const fetchdata = async () => {
-        const res = await fetch("https://fakestoreapi.com/products");
-        const data = await res.json();
-        setProduct(data);
-    }
-
-    // const fetchApi = async () => {
-    //     const res = await fetchProduct();
-    //     if (res && res.data.EC === 0) {
-    //         setProduct(res.data.DT);
-    //     }
+    // const fetchdata = async () => {
+    //     const res = await fetch("https://fakestoreapi.com/products");
+    //     const data = await res.json();
+    //     setProduct(data);
     // }
+
+    const fetchApi = async () => {
+        const res = await fetchProduct();
+        if (res && res.data.EC === 0) {
+            setProduct(res.data.DT);
+        }
+    }
 
     const handleAddcart = (product: any) => {
         dispatch(add(product))

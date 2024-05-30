@@ -19,6 +19,9 @@ const fetchDeleteProduct = (user: any) => {
 const fetchCart = () => {
     return axios.get('/api/v1/product/read_cart')
 }
+const fetchDiscount = () => {
+    return axios.get('/api/v1/product/read_discount')
+}
 export {
-    fetchProduct, fetchPagination, fetchDeleteProduct, fetchCreateProduct, fetchCart
+    fetchProduct, fetchPagination, fetchDeleteProduct, fetchCreateProduct, fetchCart, fetchDiscount
 }

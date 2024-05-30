@@ -74,6 +74,7 @@ const initApiRouter = (app) => {
     router.get('/product/read', apiController.getProduct)
     router.get('/product/read/:id', apiController.getProductId)
     router.get('/product/PaginationProduct', apiController.PaginationProduct)
+    router.get('/product/read_discount', apiController.Discount)
     router.delete('/product/delete', apiController.DeleteProduct)
 
     return app.use('/api/v1/', router)

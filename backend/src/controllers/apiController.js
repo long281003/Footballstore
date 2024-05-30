@@ -248,8 +248,27 @@ const getCart = async (req, res) => {
     }
 }
 
+const Discount = async (req, res) => {
+    try {
+        let data = await productServices.getdiscount()
+        return res.status(200).json({
+            EM: data.EM,
+            EC: data.EC,
+            DT: data.DT
+        })
+
+    } catch (error) {
+        console.log(error)
+        return res.status(200).json({
+            EM: 'get discount error!',
+            EC: -1,
+            DT: ''
+        })
+    }
+}
+
 
 module.exports = {
-    handlelogout, handleRegister, handleLogin, handleUpload,
+    handlelogout, handleRegister, handleLogin, handleUpload, Discount,
     getProduct, PaginationProduct, DeleteProduct, getProductId, createproduct, AddCart, getCart
 }

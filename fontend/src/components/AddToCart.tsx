@@ -6,11 +6,7 @@ import { useEffect, useState } from "react";
 
 
 
-interface Props {
-    product: Product;
-}
-
-const AddToCart = (props: Props) => {
+const AddToCart = () => {
 
     const [product, setProduct] = useState([]);
 

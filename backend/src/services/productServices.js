@@ -160,6 +160,27 @@ const getdelete = async (productId) => {
     }
 }
 
+const getdiscount = async () => {
+    try {
+        const discount = await db.Discount.findAll({
+            attributes: ['id', 'image', 'MaCode', 'description', 'condition'],
+            raw: true
+        })
+        return {
+            EM: 'success!',
+            EC: 0,
+            DT: discount
+        }
+    } catch (error) {
+        console.log(error)
+        return {
+            EM: "faild",
+            EC: 1,
+            DT: ""
+        }
+    }
+}
+
 module.exports = {
-    readProduct, getPagination, getdelete, Productid,
+    readProduct, getPagination, getdelete, Productid, getdiscount
 }

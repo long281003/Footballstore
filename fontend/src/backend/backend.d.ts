@@ -17,3 +17,10 @@ interface IBlog {
     author: string
     content: string
 }
+
+interface Discount {
+    id: number;
+    MaCode: string;
+    description: string;
+    condition: string;
+}
