@@ -49,7 +49,7 @@ const Ball = (props: Props) => {
                             <div className='col-lg-3 col-md-2 col-sm-3 my-4' key={`product-${item.id}`}>
                                 <div className={y['card']}>
                                     <Link href={`/Ball/${item.id}`}>
-                                        <img src={item.image} alt='imag' width={200} height={400} />
+                                        <img src={`https://fakestoreapi.com/img/${item.image}`} alt='imag' width={200} height={400} />
                                     </Link>
                                     <h1>{item.name}</h1>
                                     <p className={y['price']}>{item.price}</p>

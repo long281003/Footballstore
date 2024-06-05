@@ -116,12 +116,14 @@ const createproduct = async (req, res) => {
             image: req.file.filename,
             groupId: req.body.groupId,
         }
+        // 
         const product = await db.Product.create(info);
         res.status(200).json({
             EM: 'success!',
             EC: 0,
             DT: product
         })
+        console.log('image: ', req.file)
     } catch (error) {
         console.log(error)
         return res.status(200).json({
@@ -266,9 +268,26 @@ const Discount = async (req, res) => {
         })
     }
 }
+const getDiscountId = async (req, res) => {
+    try {
+        let discountID = await productServices.getIDdiscount(req.params.id)
+        return res.status(200).json({
+            EM: discountID.EM,
+            EC: discountID.EC,
+            DT: discountID.DT
+        })
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json({
+            EM: 'get discount error!',
+            EC: -1,
+            DT: ''
+        })
+    }
+}
 
 
 module.exports = {
-    handlelogout, handleRegister, handleLogin, handleUpload, Discount,
+    handlelogout, handleRegister, handleLogin, handleUpload, Discount, getDiscountId,
     getProduct, PaginationProduct, DeleteProduct, getProductId, createproduct, AddCart, getCart
 }

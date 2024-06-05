@@ -73,6 +73,7 @@ const Admin = () => {
     }
     const hanldeDeleteUser = async (user: any) => {
         let res = await deleteUser(user)
+        // console.log("check delete: ", res)
         if (res && res.data && res.data.EM === 0) {
             await fetchUser()
             confirm(res.data.DT)

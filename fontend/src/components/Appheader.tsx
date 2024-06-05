@@ -1,6 +1,4 @@
 
-import y from '@/styles/style.module.css'
-import { Container } from '@mui/material'
 const Appheader = () => {
     return (
         <>
@@ -17,7 +15,7 @@ const Appheader = () => {
                             <div id="dropdownNavbar" className=" hidden group-hover:block  absolute z-10  font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-40">
                                 <ul className=" py-2 text-base  ">
                                     <li>
-                                        <a href="#" className="block  py-2 no-underline text-stone-500 hover:text-red-600 ">Trải nghiệm web</a>
+                                        <a href="/Wholng" className="block  py-2 no-underline text-stone-500 hover:text-red-600 ">Trải nghiệm web</a>
                                     </li>
                                     <li>
                                         <a href="#" className="block py-2 no-underline text-stone-500 hover:text-red-600">Khách hàng vip</a>
@@ -161,11 +159,7 @@ const Appheader = () => {
                 </div>
             </div>
 
-            <div className="home-header-banner mb-5">
-                <div className={y['video']}>
-                    <video src="/video.mp4" autoPlay loop muted />
-                </div>
-            </div>
+
 
         </>
     )

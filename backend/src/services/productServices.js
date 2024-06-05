@@ -181,6 +181,27 @@ const getdiscount = async () => {
     }
 }
 
+
+const getIDdiscount = async (discountID) => {
+    try {
+        let idDC = await db.Discount.findOne({
+            where: { id: discountID }
+        })
+        return {
+            EM: 'success!',
+            EC: 0,
+            DT: idDC
+        }
+    } catch (error) {
+        console.log(error)
+        return {
+            EM: "faild",
+            EC: 1,
+            DT: ""
+        }
+    }
+}
+
 module.exports = {
-    readProduct, getPagination, getdelete, Productid, getdiscount
+    readProduct, getPagination, getdelete, Productid, getdiscount, getIDdiscount
 }

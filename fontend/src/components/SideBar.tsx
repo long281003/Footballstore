@@ -124,13 +124,6 @@ const SideBar = () => {
                                         </Nav>
                                     ) : (
                                         <Nav>
-                                            {/* <Nav className="">
-                                                <Image className='cursor-pointer' src='/icon-user.webp' width={26} height={26} alt='icon-user' />
-                                                <ul className='border border-indigo-600'>
-                                                    <li><Link href='/Login' className="no-underline list-image-none text-black my-4">Log in</Link></li>
-                                                    <li><Link href='/Register' className="no-underline list-image-none text-black">Register</Link></li>
-                                                </ul>
-                                            </Nav> */}
                                             <div className="flex mr-3 relative ">
                                                 <div className="group relative">
                                                     <a className="flex cursor-pointer mx-2 mb-1 no-underline text-black  ">
@@ -140,10 +133,10 @@ const SideBar = () => {
                                                     <div id="dropdownNavbar" className=" hidden group-hover:block absolute z-10  font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-48 dark:bg-gray-700 dark:divide-gray-600">
                                                         <ul className="py-2 text-base ">
                                                             <li>
-                                                                <a href="#" className="block py-2 no-underline text-stone-500 hover:text-red-600 ">Đăng ký</a>
+                                                                <a href="/Register" className="block py-2 no-underline text-stone-500 hover:text-red-600 ">Đăng ký</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" className="block py-2 no-underline text-stone-500 hover:text-red-600 ">Đăng nhập</a>
+                                                                <a href="/Login" className="block py-2 no-underline text-stone-500 hover:text-red-600 ">Đăng nhập</a>
                                                             </li>
                                                             <li>
                                                                 <a href="#" className="block py-2 no-underline text-stone-500 hover:text-red-600 ">Thanh toán</a>

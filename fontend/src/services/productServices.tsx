@@ -13,8 +13,8 @@ const fetchPagination = (page: any, limit: any) => {
     return axios.get(`/api/v1/product/PaginationProduct?page=${page}&limit=${limit}`)
 }
 
-const fetchDeleteProduct = (user: any) => {
-    return axios.delete('/api/v1/product/delete', { data: { id: user.id } })
+const fetchDeleteProduct = (product: any) => {
+    return axios.delete('/api/v1/product/delete', { data: { id: product.id } })
 }
 const fetchCart = () => {
     return axios.get('/api/v1/product/read_cart')
@@ -22,6 +22,10 @@ const fetchCart = () => {
 const fetchDiscount = () => {
     return axios.get('/api/v1/product/read_discount')
 }
+const fetchDiscountID = (discount: any) => {
+    return axios.get(`/api/v1/product/discountID/${discount.id}`)
+}
 export {
-    fetchProduct, fetchPagination, fetchDeleteProduct, fetchCreateProduct, fetchCart, fetchDiscount
+    fetchProduct, fetchPagination, fetchDeleteProduct, fetchCreateProduct, fetchCart,
+    fetchDiscount, fetchDiscountID
 }

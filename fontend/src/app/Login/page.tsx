@@ -43,7 +43,7 @@ const Login = () => {
             // const res = await login(ValueLogin, password, dispatch)
             // console.log(res)
             const res = await loginUser(ValueLogin, password)
-            dispatch(loginSuccess(res.data.DT))
+            dispatch(loginSuccess(res.data.DT))  // lưu token trong redux
             if (res && res.data && res.data.EC === 0) {
                 let groupWithRole = res.data.DT.groupWithRole
                 // let token = res.data.DT.access_token
@@ -73,7 +73,7 @@ const Login = () => {
 
                             </div>
                         </div>
-                        <div className="content-right col-sm-5 col-12 d-flex flex-column gap-3 py-3 border rounded mt-3 bg-light shadow p-3 bg-body-tertiary rounded">
+                        <div className="content-right col-sm-5 col-12 d-flex flex-column gap-3 py-3 border mt-3 bg-light shadow p-3 bg-body-tertiary rounded">
                             <input type="email" className={objcheckInput.emailvalidate ? "form-control" : "form-control is-invalid"} placeholder='Email address or phone number'
                                 value={ValueLogin} onChange={(event) => { setValuelogin(event.target.value) }} />
 
