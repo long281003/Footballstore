@@ -15,7 +15,7 @@ const Admin = () => {
     //Products
     const [listProduct, setlistProduct] = useState([]);
     const [CurrentPageProduct, setCrurentPageProduct] = useState<number>(1)
-    const [CurentLimitProduct, setCurentLimitProduct] = useState<number>(3)
+    const [CurentLimitProduct, setCurentLimitProduct] = useState<number>(6)
     const [TotalPagesProduct, setTotalPagesProduct] = useState(0)
     const [ActionModal, setActionMadal] = useState('')
 
@@ -86,7 +86,7 @@ const Admin = () => {
     return (
         <>
             <div>
-                <div className='container'  >
+                <div className='container'>
                     <div className='manage-products-container'>
                         <div className='product-header'>
                             <div className='title my-3'>
@@ -103,7 +103,7 @@ const Admin = () => {
                                     <tr>
                                         <th scope='col'>No</th>
                                         <th scope="col">Id</th>
-                                        {/* <th scope='col'>image</th> */}
+                                        <th scope='col'>image</th>
                                         <th scope="col">name</th>
                                         <th scope="col">price</th>
                                         <th scope='col'>description</th>
@@ -118,7 +118,7 @@ const Admin = () => {
                                                 <tr key={`row-${index}`}>
                                                     <td>{(CurrentPageProduct - 1) * CurentLimitProduct + index + 1}</td>
                                                     <td>{item.id}</td>
-                                                    {/* <td>{item.image ? item.image : ''}</td> */}
+                                                    <td><img src={item.image} width={50} height={50} /></td>
                                                     <td>{item.name}</td>
                                                     <td>{item.price}</td>
                                                     <td>{item.description}</td>

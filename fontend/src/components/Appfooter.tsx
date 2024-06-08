@@ -18,10 +18,10 @@ const Appfooter = () => {
                             <div className={y['content']}>
                                 <div className="row">
                                     <div className="col-4">
-                                        <h5><b>LOWQ SPORT - GIÀY BÓNG ĐÁ CHÍNH HÃNG</b></h5>
+                                        <h5><b>WHOLNG SPORT - GIÀY BÓNG ĐÁ CHÍNH HÃNG</b></h5>
                                         <p>Địa chỉ: Số 35 Ngõ 7 Tân Mỹ, Quận Mỹ Đình 1, Thành phố Hà Nội</p>
                                         <p>Số điện thoại:  033 9400730 hoặc 0974651628 </p>
-                                        <p>Email: longdohuu2908@gmail.com DL BIDV, Chi nhánh Khu Công Nghiệp Thạch Thất, TK: DO HUU LONG, STK: 4520359666</p>
+                                        <p>Email: longdohuu2908@gmail.com DL BIDV, Chi nhánh Khu Công Nghiệp Thạch Thất, TK: DO HUU LONG, STK: 4520352003</p>
                                         <div className='mx-5 row'>
                                             <Link className='col-2 nav-link mx-2' href='https://www.facebook.com/shootchannelvn/'>
                                                 <Image

@@ -25,7 +25,10 @@ const fetchDiscount = () => {
 const fetchDiscountID = (discount: any) => {
     return axios.get(`/api/v1/product/discountID/${discount.id}`)
 }
+const fetchPaginationPRD = (page: any, limit: any) => {
+    return axios.get(`/api/v1/product/read_PaginationProduct?page=${page}&limit=${limit}`)
+}
 export {
     fetchProduct, fetchPagination, fetchDeleteProduct, fetchCreateProduct, fetchCart,
-    fetchDiscount, fetchDiscountID
+    fetchDiscount, fetchDiscountID, fetchPaginationPRD
 }

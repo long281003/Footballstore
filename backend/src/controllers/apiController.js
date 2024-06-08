@@ -286,8 +286,27 @@ const getDiscountId = async (req, res) => {
     }
 }
 
+const getPaginationProduct = async (req, res) => {
+    try {
+        let page = req.query.page;
+        let limit = req.query.limit;
+        let data = await productServices.getPaginationPRD(+page, +limit)
+        return res.status(200).json({
+            EM: data.EM,
+            EC: data.EC,
+            DT: data.DT
+        })
+    } catch (error) {
+        console.log(error)
+        return res.status(200).json({
+            EM: 'get user error!',
+            EC: -1,
+            DT: ''
+        })
+    }
+}
 
 module.exports = {
-    handlelogout, handleRegister, handleLogin, handleUpload, Discount, getDiscountId,
+    handlelogout, handleRegister, handleLogin, handleUpload, Discount, getDiscountId, getPaginationProduct,
     getProduct, PaginationProduct, DeleteProduct, getProductId, createproduct, AddCart, getCart
 }

@@ -136,6 +136,7 @@ const getdelete = async (productId) => {
             where: { id: productId },
 
         })
+        console.log("hkb", productdata)
         if (productdata) {
             await productdata.destroy()
             return {
@@ -150,6 +151,7 @@ const getdelete = async (productId) => {
                 DT: ''
             }
         }
+
     } catch (error) {
         console.log(error)
         return {
@@ -202,6 +204,37 @@ const getIDdiscount = async (discountID) => {
     }
 }
 
+const getPaginationPRD = async (page, limit) => {
+    try {
+        let offset = (page - 1) * limit
+        let { count, rows } = await db.Product.findAndCountAll({
+            attributes: ['image', 'name', 'price', 'description'],
+            // include: { model: db.Group, attributes: ['name', 'description'] },
+            // order: [['id', 'DESC']],
+            offset: offset,
+            limit: limit,
+        })
+        let totalPages = Math.ceil(count / limit)
+        let Data = {
+            totalRow: count,
+            totalPages: totalPages,
+            products: rows
+        }
+        return {
+            EM: "success",
+            EC: 0,
+            DT: Data
+        }
+    } catch (error) {
+        console.log(error)
+        return {
+            EM: "wrong server",
+            EC: -1,
+            DT: []
+        }
+    }
+}
+
 module.exports = {
-    readProduct, getPagination, getdelete, Productid, getdiscount, getIDdiscount
+    readProduct, getPagination, getdelete, Productid, getdiscount, getIDdiscount, getPaginationPRD
 }

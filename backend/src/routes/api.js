@@ -1,34 +1,11 @@
 const express = require('express')
+const router = express.Router()
 const apiController = require('../controllers/apiController')
 const userController = require('../controllers/userController')
 const groupController = require('../controllers/groupController')
 const { checkUserJWT, checkUserPermission } = require('../middleware/JWTaction')
 const roleController = require('../controllers/roleController')
-const multer = require('multer')
-const path = require('path')
-const router = express.Router()
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './src/public/image')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname))
-    }
-})
-
-const upload = multer({
-    storage: storage,
-    limits: { fileSize: '10000000' },
-    fileFilter: (req, file, cb) => {
-        const fileTypes = /jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF/
-        const mimeTypes = fileTypes.test(file.mimetype)
-        const extname = fileTypes.test(path.extname(file.originalname))
-        if (mimeTypes && extname) {
-            return cb(null, true)
-        }
-        cb('Give proper file formate to upload ')
-    }
-})
+const upload = require('../middleware/UploadImage')
 
 
 
@@ -74,6 +51,7 @@ const initApiRouter = (app) => {
     router.get('/product/read', apiController.getProduct)
     router.get('/product/read/:id', apiController.getProductId)
     router.get('/product/PaginationProduct', apiController.PaginationProduct)
+    router.get('/product/read_PaginationProduct', apiController.getPaginationProduct)
     router.get('/product/read_discount', apiController.Discount)
     router.delete('/product/delete', apiController.DeleteProduct)
     router.get('/product/discountID/:id', apiController.getDiscountId)

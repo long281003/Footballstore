@@ -12,7 +12,7 @@ const Layout = ({ children }: any) => {
                 <SideBar />
                 <Appheader />
                 {children}
-                <div className={d['height']}>
+                <div className='pt-3'>
                     <Appfooter />
                 </div>
             </Provider>

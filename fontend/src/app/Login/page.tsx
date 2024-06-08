@@ -81,7 +81,7 @@ const Login = () => {
                                 value={password} onChange={(event) => { setPassword(event.target.value) }}
                                 onKeyPress={() => hanldePressOnkey(event)} />
 
-                            <button type="submit" onClick={() => handleLogin()} className="btn btn-primary" >Login</button>
+                            <button type="submit" onClick={() => handleLogin()} className="btn btn-primary " >Login</button>
                             <span className='text-center'><a className={x['forgot-password']} href='/ForgotPassword'>Forgot your password</a></span>
                             <hr />
                             <div className='text-center'>

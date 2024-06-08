@@ -30,7 +30,6 @@ export default function RootLayout({
             {children}
           </div>
         </Layout>
-
         <ToastContainer
           position="top-center"
         />

@@ -9,6 +9,8 @@ import { fetchProduct } from '@/services/productServices';
 import y from '@/styles/style.module.css'
 import { useDispatch } from 'react-redux';
 import { add } from '@/redux/cartSlice';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactPaginate from 'react-paginate';
 
 interface Props {
     product: Product
@@ -53,6 +55,7 @@ const Cup = (props: Props) => {
                         )
                     })}
                 </div>
+
             </Container >
         </>
     )

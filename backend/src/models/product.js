@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             // define association here
             Product.belongsTo(models.Group);
             Product.belongsTo(models.User);
-            Product.belongsToMany(models.Cart, { through: 'Cart_item' })
+
 
         }
     }
